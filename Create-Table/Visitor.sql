@@ -1,0 +1,10 @@
+CREATE TABLE VISITOR
+(
+id NUMBER,
+fname VARCHAR(30),
+lname VARCHAR(30),
+date_of_visit VARCHAR(10),
+student_id NUMBER,
+PRIMARY KEY (id),
+FOREIGN KEY (student_id) REFERENCES STUDENT(ID)
+);
