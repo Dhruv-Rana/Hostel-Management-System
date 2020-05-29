@@ -1,0 +1,9 @@
+CREATE TABLE ROOM
+(
+id NUMBER,
+student_id NUMBER,
+hostel_id NUMBER,
+PRIMARY KEY (id),
+FOREIGN KEY (student_id) REFERENCES STUDENT(ID),
+FOREIGN KEY (hostel_id) REFERENCES HOSTEL(ID)
+);
