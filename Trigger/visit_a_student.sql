@@ -1,0 +1,9 @@
+CREATE OR REPLACE TRIGGER visit_student
+AFTER INSERT ON VISITOR
+FOR EACH ROW
+WHEN (NEW.ID>0)
+BEGIN
+UPDATE STUDENT
+SET number_of_visitors=number_of_visitors+1
+WHERE id=:NEW.student_id;
+END;
